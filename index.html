@@ -14,110 +14,171 @@
 
 <body>
 
-    <main class="container-fluid row bg-">
-        <!-- #SECTION Checkout -->
-        <section class="col bg-white">
+    <main class="container-fluid">
+        <section class=" row">
 
-            <!-- #SECTION options -->
-            <div class="row">
-                <div class="col">Name</div>
-                <div class="col">Qty</div>
-                <div class="col">Each</div>
-                <div class="col">Total</div>
-            </div>
-
-            <!-- #SECTION costs -->
-            <div class="row">
-                <div id="item-name" class="col">
-                    <p>Item Name</p>
-                </div>
-
-                <div id="item-count" class="col">
-                    <p>Qty Count</p>
-                </div>
-
-                <div id="item-cost" class="col">
-                    <p>Item cost</p>
-                </div>
-
-                <div id="items-total" class="col">
-                    <p>Qty * Item $</p>
-                </div>
-            </div>
-
-            <!-- #SECTION checkout -->
-            <div class="row text-end bg-success">
-                <div class="col">
-                    <div class="row">
-                        <div>Total</div>
-                        <div id="total">$000</div>
+            <!-- #SECTION Checkout -->
+            <section class="col-5">
+                <section class="bg-white m-3 shadow">
+                    <!-- #SECTION options -->
+                    <div class="border-bottom border-5">
+                        <div class="row">
+                            <div class="col-6 text-primary fw-bold">Name</div>
+                            <div class="col-2 text-primary fw-bold">Qty</div>
+                            <div class="col-2 text-primary fw-bold">Each</div>
+                            <div class="col-2 text-primary fw-bold">Total</div>
+                        </div>
                     </div>
-                    <button class="btn btn-primary" onclick="Checkout()">Checkout</button>
-                </div>
-            </div>
 
-        </section>
+                    <!-- #SECTION costs -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="p-1 fw-medium">Item Name</div>
+                            <div id="item-name" class="p-1 fw-medium">
+                                <p></p>
+                            </div>
+                        </div>
 
-        <!-- #SECTION Items -->
-        <section class="col">
-            <div class="row">
-                <div class="col-12">Toppings</div>
-                <div class="col-4 card" onclick="AddItemCart(toppings, 'Sprinkles')">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-R2dWq8MEJd1CHdwryUSoyvpx8vQoAo20Kg&usqp=CAU"
-                        alt="sprinkles" class="card-img-top">
-                    <p>Sprinkles 1.00$</p>
+                        <div class="col-2">
+                            <div class="p-1 fw-medium">Qty</div>
+                            <div id="item-count" class="p-1 fw-medium">
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="p-1 fw-medium">Each</div>
+                            <div id="item-cost" class="p-1 fw-medium">
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="p-1 fw-medium">Total</div>
+                            <div id="items-total" class="p-1 fw-medium">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #SECTION checkout -->
+                    <div class="row text-end ">
+                        <div class="col">
+                            <div class="bg-secondary-subtle p-3 border-top border-5">
+
+                                <div class="row">
+                                    <div>Total</div>
+                                    <p id="total"><i class="mdi mdi-currency-usd"></i> 0.00</p>
+                                </div>
+                                <button class="btn btn-primary" onclick="Checkout()">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- #SECTION Items -->
+            <section class="col-7">
+                <div class="row text-center">
+                    <div class="col-12 text-start">Toppings</div>
+                    <div class="col-4" onclick="AddItemCart(toppings, 'Sprinkles')">
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-R2dWq8MEJd1CHdwryUSoyvpx8vQoAo20Kg&usqp=CAU"
+                                alt="sprinkles" class="card-img-top">
+                            <p>Sprinkles 1.00$</p>
+                        </div>
+                    </div>
+                    <div class="col-4" onclick="AddItemCart(toppings, 'Chocolate Chips')">
+                        <div class="card">
+                            <img src="https://www.preparedpantry.com/cdn/shop/products/13780307_lmilkchocolatechipsreduced_02cec14d-1b24-4cb1-aa0f-0a168ba4d856.jpg?v=1664678299"
+                                alt="chocolate chips" class="card-img-top">
+                            <p>Chocolate Chips 1.50$</p>
+                        </div>
+                    </div>
+                    <div class="col-4" onclick="AddItemCart(toppings, 'Gummy Worms')">
+                        <div class="card">
+                            <img src="https://m.media-amazon.com/images/I/81S-DzdsN0L._AC_UF894,1000_QL80_.jpg"
+                                alt="gummy worms" class="card-img-top">
+                            <p>Gummy Worms 2.00$</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4 card" onclick="AddItemCart(toppings, 'Chocolate Chips')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Chocolate Chips 1.50$</p>
+                <div class="row text-center">
+                    <div class="col-12 text-start">Vessels</div>
+                    <div class="col-4" onclick="AddItemCart(vessels, 'Sugar Cone')">
+                        <div class="card">
+                            <img src="https://www.webstaurantstore.com/images/products/large/123848/1914523.jpg"
+                                alt="sugar cone" class="card-img-top">
+                            <p>Sugar Cone 0.50$</p>
+                        </div>
+                    </div>
+                    <div class="col-4" onclick="AddItemCart(vessels, 'Waffle Cone')">
+                        <div class="card">
+                            <img src="https://www.webstaurantstore.com/images/products/large/67189/1915151.jpg"
+                                alt="waffle cone" class="card-img-top">
+                            <p>Waffle Cone 1.50$</p>
+                        </div>
+                    </div>
+                    <div class="col-4" onclick="AddItemCart(vessels, 'Mick Bowl')">
+                        <div class="card">
+                            <img src="https://www.carryoutsupplies.com/cdn/shop/products/RSCICEPPR6WHT-edit_1200x1200.jpg?v=1658296871"
+                                alt="ice cream bowl" class="card-img-top">
+                            <p>Mick Bowl 1.00$</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4 card" onclick="AddItemCart(toppings, 'Gummy Worms')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Gummy Worms 2.00$</p>
+                <div class="row text-center">
+                    <div class="col-12 text-start">Ice Cream (Per Scoop)</div>
+                    <div class="col-4" onclick="AddItemCart(iceCream, 'Vanilla')">
+                        <div class="card">
+                            <img src="https://glutenfreeonashoestring.com/wp-content/uploads/2023/01/3-Ingredient-ice-cream-scoop-600x600-1.jpg"
+                                alt="vanilla ice cream" class="card-img-top">
+                            <p>Vanilla 0.99$</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4" onclick="AddItemCart(iceCream, 'Chocolate')">
+                        <div class="card">
+                            <img src="https://www.alyonascooking.com/wp-content/uploads/2019/08/chocolate-ice-cream-recipe-19.jpg"
+                                alt="chocolate ice cream" class="card-img-top">
+                            <p>Chocolate 1.10$</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4" onclick="AddItemCart(iceCream, 'Strawberry')">
+                        <div class="card">
+                            <img src="https://www.thespruceeats.com/thmb/kpuMkqk0BhGMTuSENf_IebbHu1s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-ice-cream-10-0b3e120e7d6f4df1be3c57c17699eb2c.jpg"
+                                alt="strawberry ice cream" class="card-img-top">
+                            <p>Strawberry 1.05$</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4" onclick="AddItemCart(iceCream, 'Mint Chocolate Chip')">
+                        <div class="card">
+                            <img src="https://cleanfoodcrush.com/wp-content/uploads/2021/09/clean-eating-simple-Homemade-Mint-Chocolate-Chip-Ice-Cream-recipe.jpg"
+                                alt="mint chocolate chip ice cream" class="card-img-top">
+                            <p>Mint Chocolate Chip 1.45$</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4" onclick="AddItemCart(iceCream, 'Cookie Dough')">
+                        <div class="card">
+                            <img src="https://www.modernhoney.com/wp-content/uploads/2023/08/Chocolate-Chip-Cookie-Dough-Ice-Cream-1.jpg"
+                                alt="cookie dough ice cream" class="card-img-top">
+                            <p>Cookie Dough 2.20$</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4" onclick="AddItemCart(iceCream, 'Rocky Road')">
+                        <div class="card">
+                            <img src="https://www.browneyedbaker.com/wp-content/uploads/2021/05/rocky-road-ice-cream-13-square.jpg"
+                                alt="rocky road ice cream" class="card-img-top">
+                            <p>Rocky Road 2.25$</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">Vessels</div>
-                <div class="col-4 card" onclick="AddItemCart(vessels, 'Sugar Cone')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Sugar Cone 0.50$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(vessels, 'Waffle Cone')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Waffle Cone 1.50$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(vessels, 'Mick Bowl')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Mick Bowl 1.00$</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">Ice Cream (Per Scoop)</div>
-                <div class="col-4 card" onclick="AddItemCart(iceCream, 'Vanilla')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Vanilla 0.99$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(iceCream, 'Chocolate')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Chocolate 1.10$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(iceCream, 'Strawberry')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Strawberry 1.05$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(iceCream, 'Mint Chocolate Chip')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Mint Chocolate Chip 1.45$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(iceCream, 'Cookie Dough')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Cookie Dough 2.20$</p>
-                </div>
-                <div class="col-4 card" onclick="AddItemCart(iceCream, 'Rocky Road')">
-                    <img src="" alt="" class="card-img-top">
-                    <p>Rocky Road 2.25$</p>
-                </div>
-            </div>
+
+            </section>
 
         </section>
     </main>

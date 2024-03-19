@@ -116,7 +116,7 @@ function DrawCart() {
     itemTotals.innerHTML = item_totals
 
     let cartTotalCost = document.getElementById("total");
-    cartTotalCost.innerHTML = total.toFixed(2);
+    cartTotalCost.innerHTML = `<i class="mdi mdi-currency-usd"></i>${total.toFixed(2)}`
 }
 
 function Checkout() {
