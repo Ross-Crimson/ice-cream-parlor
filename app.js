@@ -65,6 +65,7 @@ let cartItems = []
 
 function AddItemCart(type, name) {
     let item = FindItem(type, name)
+    if (type == vessels) OneVesselCheck()
     item.quantity++;
     UpdateCart(item);
     DrawCart();
@@ -77,6 +78,12 @@ function FindItem(type, name) {
             return item;
         }
     }
+}
+
+function OneVesselCheck() {
+    vessels.forEach((item) => {
+        item.quantity = 0
+    })
 }
 
 function UpdateCart(item) {

@@ -12,3 +12,9 @@ main {
     object-fit: cover;
     object-position: bottom;
 }
+
+.chelsea-market-regular {
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
